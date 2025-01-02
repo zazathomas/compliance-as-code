@@ -1,0 +1,17 @@
+apiVersion: cilium.io/v2
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: nlb-gateway-firewall
+spec:
+  endpointSelector:
+    matchExpressions:
+    - key: reserved:ingress
+      operator: Exists
+  ingress:
+    - fromCIDRSet: 
+        - cidr: 51.37.117.210/32
+    - fromEntities:
+        - cluster
+  egress:
+    - toEntities:
+        - all
