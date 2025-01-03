@@ -9,7 +9,7 @@ spec:
       operator: Exists
   ingress:
     - fromCIDRSet: 
-        - cidr: 51.37.67.178/32
+        - cidr: 51.37.67.178/32 # Zaza
     - fromEntities:
         - cluster
   egress:
