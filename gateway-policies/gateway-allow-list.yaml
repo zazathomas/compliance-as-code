@@ -3,15 +3,15 @@ kind: CiliumClusterwideNetworkPolicy
 metadata:
   name: nlb-gateway-firewall
 spec:
+  egress:
+  - toEntities:
+    - all
   endpointSelector:
     matchExpressions:
     - key: reserved:ingress
       operator: Exists
   ingress:
-    - fromCIDRSet: 
-        - cidr: 78.152.233.215/32 # Zaza
-    - fromEntities:
-        - cluster
-  egress:
-    - toEntities:
-        - all
+  - fromCIDRSet:
+    - cidr: 93.107.202.51/32
+  - fromEntities:
+    - cluster
