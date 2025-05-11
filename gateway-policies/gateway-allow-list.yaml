@@ -12,6 +12,6 @@ spec:
       operator: Exists
   ingress:
   - fromCIDRSet:
-    - cidr: 109.78.130.159/32
+    - cidr: 51.37.24.200/32
   - fromEntities:
     - cluster
