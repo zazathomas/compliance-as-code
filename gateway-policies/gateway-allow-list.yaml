@@ -13,5 +13,6 @@ spec:
   ingress:
   - fromCIDRSet:
     - cidr: 109.78.43.7/32
+    - cidr: 10.0.20.105/32
   - fromEntities:
     - cluster
